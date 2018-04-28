@@ -1,0 +1,199 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20/03/2018, 20:11:05
+    Author     : Son Goku
+*/
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+html, body{
+    margin:0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* === MENU === */
+
+.nave{
+    width: 100%;
+    text-align:center;
+    height:70px;
+    line-height:70px;
+    z-index: 999999;
+}
+
+.meumenu{
+    width: 100%;
+    margin:0 30px 0 0;
+}
+
+
+.meumenu a{
+    text-decoration:none;
+    color: #fff;
+    margin: 0 10px;
+    padding:20px;
+    line-height:70px;
+    transition: 0.3s;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.meumenu a:hover{
+    background-color: #f38534;
+    color: #fff;
+    text-decoration:none;
+}
+
+.nave label{
+    display:none;
+    margin: 0 0 0 80%;
+    font-size: 26px;
+    line-height: 70px;
+    cursor:pointer;
+    color:#fff;
+}
+
+#toggle{
+    display:none;
+}
+
+@media only screen and (max-width: 500px){
+    #label-toggle{
+        display:block;
+    }
+
+    .meumenu{
+        text-align:center;
+        width:100%;
+        display: none;
+    }
+
+    .meumenu a{
+        display:block;
+        border-bottom: 1px solid #EAEAEB;
+        margin:0;
+    }
+
+    #toggle:checked + .meumenu{
+        display:block;
+    }
+
+    .dropdown-mymenu{
+        position: relative;
+        display: inline-block;
+        width:100%;
+    }
+
+    .dropdown-mymenu .dropdown-menu-content li a{
+        padding:0px;
+        margin:0px;
+        height:60px;
+
+    }
+}
+
+.dropdown-mymenu{
+    position: relative;
+    display: inline-block;    
+}
+
+.dropdown-menu-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style:none;
+    width:100%;
+    padding:0;
+
+}
+.dropdown-menu-content li a{
+    color:#666;
+}
+.dropdown-menu-content li a:hover{
+    color:#fff;
+}
+
+.dropdown-mymenu:hover .dropdown-menu-content {
+    display: block;
+}
+/* === FIM MENU === */
+
+
+/* === IMAGEM DE FUNDO, LOGO E SLOGAN === */
+.intro{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background: url("../img/header-background-opa.jpg") no-repeat 50% 50%;
+    display: table;
+    top:0;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.intro .content-intro{
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    max-width: none;
+}
+
+.content-intro{
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-intro h3{
+    font-family: 'Raleway', sans-serif;
+    color: #f9f3f4;
+    font-size: 500%;
+}
+
+.content-intro p{
+    font-family: 'Oswald', sans-serif;
+    color: #f9f3f4;
+    font-size: 200%;
+}
+
+.smartphone-header-img{
+    width: 30%;
+    margin: 0% auto;
+}
+
+/* === FIM === */
+
+@media screen and (max-width: 750px){
+    h2{
+        text-align: center;
+    }
+    h1{
+        text-align: center;
+    }
+    h3{
+        text-align: center;
+    }
+
+    .smartphone-header-img{
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .content-intro h3{
+        font-size: 150%;
+    }
+    .content-intro p{
+        font-size: 150%;
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div  id="primary-div">
+            <button class="block" id="block-one" style="width: 100px; height: 100px; background: green; margin: 10px"></button>
+            <button class="block" id="block-two" style="width: 100px; height: 100px; background: green; margin: 10px"></button>
+            <button class="block" id="block-three" style="width: 100px; height: 100px; background: green; margin: 10px"></button>
+        </div>
+
+        <style>
+            div {
+                display:inline-block;
+            }
+            
+            div#primary-div div{
+                cursor: pointer;
+            }
+        </style>
+        
+        <script>
+            $(".block").mouseenter(function (){
+                $(this).css({"background":"blue"})
+            });
+            
+            $(".block").mouseleave(function(){
+                $(this).css({"background":"green"});
+            });
+            
+            var blockOne = $("#block-one");
+            var blockTwo = $("#block-two");
+            var blockThree = $("#block-three");
+            
+            var blockControl = "block-one";
+                
+            $(".block").click(function(){
+                var id = $(this).prop('id');
+                
+                
+                //alert("ID -> " + id + " BlockControl -> " + blockControl);
+
+
+                if(id == "block-one")
+                {
+                    if (blockControl == id ) {
+                        blockControl = "block-two";
+                        //alert("Primeiro if --    Acertou block-one. Valor alterado para -> " + blockControl);
+                        blockOne.prop('disabled', true);    
+                        alert("Acerto o primeiro mizeravi");
+                    }else{alert("ERROU CABAÇO");}
+                    
+                }else
+                if(blockControl == "block-two")
+                {   
+                    if (blockControl == id ) {
+                        blockControl = "block-three";
+                        //alert("Segundo if --     Acertou block-two. Valor alterado para -> " + blockControl);   
+                        blockTwo.prop('disabled', true);    
+                        alert("Acerto o segundo mizéra");    
+                    }else{alert("ERROU CABAÇO");}
+                    
+                }else
+
+                if(blockControl == "block-three")
+                {
+                    if (blockControl == id ) {
+                        blockControl = "block-three";
+                        blockThree.prop('disabled', true);    
+                        alert("ganhou o joguin mizeravi");
+                    }else{alert("ERROU CABAÇO");}
+                   
+                }
+
+                
+                
+            });
+            
+            var blockOneValue = 1;
+            var blockTwoValue = 2;
+            var blockThreeValue = 3;
+            
+            
+        </script>
+    </body>
+</html>

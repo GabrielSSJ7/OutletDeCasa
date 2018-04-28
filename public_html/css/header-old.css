@@ -1,0 +1,129 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20/03/2018, 20:11:05
+    Author     : Son Goku
+*/
+
+body, p{
+    margin: 0;
+    padding: 0;
+    font-family: 'fantasy','serif';
+
+}
+
+h3{
+    font-family: 'monospace';
+}
+
+.menu-bar {
+    text-align: center;
+    padding: 20px 10px 20px 10px;
+  
+    
+}
+.menu-bar > ul{
+   
+}
+.menu-bar > ul > li{
+    display: inline;
+    padding: 15px 20px;  
+   
+}
+
+.menu-bar > ul > li > a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-bar > ul > li:hover{
+    border-bottom: 2px solid #f38534;
+    transition: 0.3s;
+    font-size: 101%;
+    cursor: pointer;
+    
+}
+
+@media screen and (max-width: 781px) and (min-width: 465px){
+  .header{-webkit-background-size: 200%; 
+    -moz-background-size: 200%; 
+    -o-background-size: 200%; 
+    background-size: 200%; 
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover; }
+
+}
+
+
+
+
+@media screen and (max-width: 1300px) and (min-width: 782px) {
+  
+  .header{-webkit-background-size: 200%; 
+    -moz-background-size: 200%; 
+    -o-background-size: 200%; 
+    background-size: 200%; 
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover; 
+    }
+    .text-header{
+        left: 0%;   
+    }
+}
+
+@media screen and (max-height: 1400px) and (min-height: 1302px){
+    .header{background-size: 150% !important;}    
+
+
+}
+
+@media screen and (max-width: 464px){
+    
+    .header{background-size: 450% !important;}
+
+}
+.header{
+   background: url("../img/header-background.jpeg")no-repeat fixed;
+   -webkit-background-size: cover;
+   -moz-background-size:cover;
+   -o-background-size:cover;
+   background-size: cover;
+   position: relative;
+   min-height: 100vh;
+
+}
+
+.header:after  nav  img{
+   opacity: 0.5;
+}
+
+.smartphone-header-img{
+    width: 20%;
+    position: relative;
+    top:30%;
+}
+.pc-header-img{
+    width: 25%;
+    top: 32%;
+    left: 70%;
+    position: absolute;
+}
+
+.text-header{
+    color:#fff;
+    top: 40%;
+    left: 50%;
+    font-size: 170%;
+    position: absolute;
+    text-align: center;
+}
+.text-header h3 {
+    font-size: 150%;
+}
